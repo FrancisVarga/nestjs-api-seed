@@ -1,7 +1,7 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "nestjs-api-seed",
   "version": "0.0.1",
-  "description": "NestJS API starter",
+  "description": "NestJS API Seed",
   "author": "Joshua Wiens <d3viant0ne>",
   "license": "Apache-2.0",
   "main": "src/server.ts",
