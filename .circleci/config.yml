@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/nest-typescript-starter
+    working_directory: ~/nestjs-api-seed
     docker:
-      - image: d3viant0ne/circleci-node8-base:latest
+      - image: easymetrics/circleci-gcp-node8
     branches:
       only:
         - master
