@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/nestjs-api-seed
     docker:
-      - image: easymetrics/circleci-gcp-node8
+      - image: easymetrics/circleci-gcp-node8:latest
     branches:
       only:
         - master
