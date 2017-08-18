@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="200" height="200"
+  <img
     src="http://kamilmysliwiec.com/public/nest-logo.png">
   <a href="https://github.com/easymetrics">
     <img width="200" height="200" vspace="" hspace="25"
