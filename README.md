@@ -23,6 +23,7 @@ _Note: The CI/CD setup if very specific EasyMetrics_
 - Any of the docker configurations begining with `FROM gcr.io/ ...` are pulling from a private registry and will have to be replaced with an applicable image of you choosing. 
 
 ### Usage
+- `npm run certs` - Generates development SSL certs for localhost consumed by DotEnv ( See example config )
 - `npm start` - execute code in `src` directory with live reload via `nodemon` transpiled with `ts-node`
 - `npm run build` - transpile and ES6+ TypeScript and create sourcemaps
 - `npm run serve:dev` - execute target code with live reload via `nodemon` transpiled with `ts-node`
