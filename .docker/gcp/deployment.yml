@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: jobtrak-facility
+ namespace: prod
+spec:
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       app: jobtrak-facility
+       tier: app
+   spec:
+     containers:
+       – name: jobtrak-facility
+         image: gcr.io/jobtrak-155518/jobtrak-facility:master
+         ports:
+           – containerPort: 3001
+           – containerPort: 4433
+       – name: jobtrak-projects
+         image: gcr.io/jobtrak-155518/jobtrak-projects:master
+         ports:
+           – containerPort: 3001
+           – containerPort: 5433
+       – name: jobtrak-redis
+         image: gcr.io/jobtrak-155518/jobtrak-redis:master
+         ports:
+           – containerPort: 6379

@@ -1,0 +1,29 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jobtrak-facility
+  namespace: prod
+  labels:
+    app: jobtrak-facility
+    tier: server
+spec:
+  selector:
+    app: jobtrak-facility
+    tier: server
+  ports:
+    - protocol: TCP
+      port: 3001
+      name: socketio
+      targetPort: 3001
+    - protocol: TCP
+      port: 4433
+      name: https
+      targetPort: 4433
+    - protocol: TCP
+      port: 80
+      name: http
+      targetPort: 80
+    - protocol: TCP
+      port: 43554
+      name: keymetrics
+      targetPort: 80

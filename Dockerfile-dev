@@ -29,6 +29,6 @@ COPY ./process.yml /var/www/app/current
 # ENV INSTANCE_NAME "nestjs-api-seed"
 
 #Expose the ports ( Nest http2/s, socket.io, keymetrics )
-EXPOSE 4433 43554 80
+EXPOSE 4433
 
 CMD ["pm2-docker", "start", "--auto-exit", "--env", "production", "process.yml"]
