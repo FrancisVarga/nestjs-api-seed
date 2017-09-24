@@ -28,9 +28,9 @@ jobs:
       - run:
           name: Code Linting
           command: npm run lint
-      - run:
-          name: Security Scan
-          command: npm run security
+      # - run:
+      #     name: Security Scan
+      #     command: npm run security
       - run:
           name: Report Code Coverage
           command: npm run report-codeclimate
