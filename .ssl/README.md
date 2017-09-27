@@ -2,9 +2,4 @@
 
 #### Generating certificates
 
-`bash generateLocalCerts 'hostNameInQuotes'`
-
-> Adapted from https://git.daplie.com/Daplie/nodejs-self-signed-certificate-example
-
-
-
+`node selfsigned.js`
