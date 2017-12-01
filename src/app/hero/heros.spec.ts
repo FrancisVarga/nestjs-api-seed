@@ -1,5 +1,5 @@
 import { Test } from '@nestjs/testing';
-import { Mockgoose } from 'mockgoose';
+import { Mockgoose } from '@easymetrics/mockgoose';
 import { Mongoose } from 'mongoose';
 
 import { SharedModule } from '../../shared/shared.module';
