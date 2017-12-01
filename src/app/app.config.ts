@@ -27,6 +27,6 @@ export class AppConfiguration {
           extended: true,
         }),
       );
-      return express;
+    return express;
   }
 }

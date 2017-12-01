@@ -13,18 +13,20 @@ import { MongooseService } from './mongoose/mongoose.service';
     DatabaseExceptionFilter,
     RestLoggerMiddleware,
     Environments,
-    MongooseService
+    MongooseService,
   ],
   exports: [
     AuthMiddleware,
     DatabaseExceptionFilter,
     RestLoggerMiddleware,
     Environments,
-    MongooseService
+    MongooseService,
   ],
 })
 export class SharedModule {
   public configure(consumer: MiddlewaresConsumer) {
-    consumer.apply(RestLoggerMiddleware).forRoutes({ path: '*', method: RequestMethod.ALL });
+    consumer
+      .apply(RestLoggerMiddleware)
+      .forRoutes({ path: '*', method: RequestMethod.ALL });
   }
 }

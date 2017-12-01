@@ -6,8 +6,8 @@ import {
   HttpStatus,
   Param,
   Post,
-  Res
-  } from '@nestjs/common';
+  Res,
+} from '@nestjs/common';
 import { Response } from 'express';
 
 import { NotFoundException } from '../../shared/exceptions';
@@ -32,13 +32,19 @@ export class HerosController {
   }
 
   @Get('/name/:name')
-  public async getByName(@Res() res: Response, @Param('name') heroName: string) {
+  public async getByName(
+    @Res() res: Response,
+    @Param('name') heroName: string,
+  ) {
     const heros = await this.herosService.findByName(heroName);
     res.status(HttpStatus.OK).json(heros);
   }
 
   @Get('/alignment/:alignment')
-  public async getByAlignment(@Res() res: Response, @Param('alignment') heroAlignment: string) {
+  public async getByAlignment(
+    @Res() res: Response,
+    @Param('alignment') heroAlignment: string,
+  ) {
     const heros = await this.herosService.findByAlignment(heroAlignment);
     res.status(HttpStatus.OK).json(heros);
   }

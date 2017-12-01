@@ -30,9 +30,14 @@ export class HerosModel {
   public herosRepository() {
     const models = this.mongooseService.connection.modelNames();
     if (models.includes(this.collection)) {
-      this.model = this.mongooseService.connection.model(this.collection) as HeroModel;
+      this.model = this.mongooseService.connection.model(
+        this.collection,
+      ) as HeroModel;
     } else {
-      this.model = this.mongooseService.connection.model(this.collection, this.schema) as HeroModel;
+      this.model = this.mongooseService.connection.model(
+        this.collection,
+        this.schema,
+      ) as HeroModel;
     }
     return this.model;
   }
@@ -70,5 +75,4 @@ export class HerosModel {
   private findByAlignment(alignment: string): DocumentQuery<Hero[], Hero> {
     return this.model.find({ alignment: alignment });
   }
-
 }
