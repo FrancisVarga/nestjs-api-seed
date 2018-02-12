@@ -25,11 +25,11 @@ export class Environments {
   }
 
   public static getRedisHost(): string {
-    return process.env.REDIS_HOST || 'localhost';
+    return process.env.REDIS_HOST;
   }
 
   public static getRedisPort(): string {
-    return process.env.REDIS_HOST || '6379';
+    return process.env.REDIS_HOST;
   }
 
   public static isEnabled(bool: string): boolean {

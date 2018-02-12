@@ -16,9 +16,7 @@ export class MongooseService {
   }
 
   get connection() {
-    if (Environments.isTest()) {
-      return (this.instance = mongoose.connection);
-    }
+    if (Environments.isTest()) { return this.instance = mongoose.connection; };
     if (this.instance) {
       return this.instance;
     } else {

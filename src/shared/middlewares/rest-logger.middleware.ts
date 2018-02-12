@@ -1,6 +1,6 @@
 import { Logger, Middleware, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 @Middleware()
 export class RestLoggerMiddleware implements NestMiddleware {
